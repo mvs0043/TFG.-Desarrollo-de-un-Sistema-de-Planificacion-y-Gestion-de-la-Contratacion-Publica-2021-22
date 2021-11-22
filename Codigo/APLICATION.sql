@@ -28,7 +28,7 @@ prompt APPLICATION 100 - PYCOTIC22
 -- Application Export:
 --   Application:     100
 --   Name:            PYCOTIC22
---   Date and Time:   17:32 Monday November 22, 2021
+--   Date and Time:   21:18 Monday November 22, 2021
 --   Exported By:     MIGUEL
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -44,7 +44,7 @@ prompt APPLICATION 100 - PYCOTIC22
 --         App Settings:           2
 --         Build Options:          6
 --       Navigation:
---         Lists:                  7
+--         Lists:                 20
 --         Breadcrumbs:            1
 --           Entries:             71
 --       Security:
@@ -120,7 +120,7 @@ wwv_flow_api.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'PYCOTIC22'
 ,p_last_updated_by=>'MIGUEL'
-,p_last_upd_yyyymmddhh24miss=>'20211122173145'
+,p_last_upd_yyyymmddhh24miss=>'20211122211822'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>3
 ,p_ui_type_name => null
@@ -383,6 +383,572 @@ wwv_flow_api.create_list_item(
 ,p_list_item_link_target=>'f?p=&APP_ID.:10053:&SESSION.::&DEBUG.:10053:::'
 ,p_list_item_icon=>'fa-comment-o'
 ,p_list_text_01=>'Report of all feedback submitted by application users'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_contratación
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163177559036297405)
+,p_name=>unistr('Categor\00EDas Contrataci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163177713104297407)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Expedientes'
+,p_list_item_link_target=>'f?p=&APP_ID.:301:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163178169654297409)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Lotes'
+,p_list_item_link_target=>'f?p=&APP_ID.:340:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163178556074297409)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Cajas Fijas'
+,p_list_item_link_target=>'f?p=&APP_ID.:370:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163178919499297409)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>unistr('Agenda Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:380:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_dirección
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163179305246299776)
+,p_name=>unistr('Categor\00EDas Direcci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163179538520299776)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>unistr('Aprobaci\00F3n Direcci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:601:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_facturación
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163179918429303845)
+,p_name=>unistr('Categor\00EDas Facturaci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163180104255303845)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Planes de Pago'
+,p_list_item_link_target=>'f?p=&APP_ID.:401:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163180564888303845)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Facturas'
+,p_list_item_link_target=>'f?p=&APP_ID.:431:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163180922258303845)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>unistr('Agenda Facturaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:480:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_home
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163181352874305892)
+,p_name=>unistr('Categor\00EDas Home')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163181579619305892)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Presupuesto'
+,p_list_item_link_target=>'f?p=&APP_ID.:100:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163181930570305892)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>unistr('Planificaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:200:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163182347052305892)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>unistr('Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:300:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163182743033305892)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>unistr('Facturaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:400:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163183150980305892)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Modelos'
+,p_list_item_link_target=>'f?p=&APP_ID.:500:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163183597932305892)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>unistr('Direcci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:600:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163183910827305893)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>'Tablas'
+,p_list_item_link_target=>'f?p=&APP_ID.:900:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163184380038305894)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>unistr('Administraci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:10000:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_modelos
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163184701551309293)
+,p_name=>unistr('Categor\00EDas Modelos')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163184941833309293)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>unistr('Gesti\00F3n de Modelos')
+,p_list_item_link_target=>'f?p=&APP_ID.:501:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_planificación
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163185359222315260)
+,p_name=>unistr('Categor\00EDas Planificaci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163185550291315260)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Previsiones'
+,p_list_item_link_target=>'f?p=&APP_ID.:203:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163185985622315261)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>unistr('Agenda Planificaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:280:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/categorías_presupuesto
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163186330040321417)
+,p_name=>unistr('Categor\00EDas Presupuesto')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163186563393321417)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Acuerdos/Convenios/... Ingresos'
+,p_list_item_link_target=>'f?p=&APP_ID.:101:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163186979715321417)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Ingresos'
+,p_list_item_link_target=>'f?p=&APP_ID.:103:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163187338786321417)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Acuerdos/Convenios/... Gastos'
+,p_list_item_link_target=>'f?p=&APP_ID.:108:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163187733789321417)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Gastos'
+,p_list_item_link_target=>'f?p=&APP_ID.:110:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163188153109321418)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Modificaciones Presupuestarias'
+,p_list_item_link_target=>'f?p=&APP_ID.:105:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163188510955321418)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>'Reservas Caja Fija'
+,p_list_item_link_target=>'f?p=&APP_ID.:112:&SESSION.::&DEBUG.::::'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/tablas_contratación
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163188902958332983)
+,p_name=>unistr('Tablas Contrataci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163189132429332984)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Proveedores'
+,p_list_item_link_target=>'f?p=&APP_ID.:1501:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163189514798332984)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>unistr('Procedimientos de Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1511:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163189924899332984)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Indicadores IGAE'
+,p_list_item_link_target=>'f?p=&APP_ID.:1521:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163190350190332984)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Tramitadores'
+,p_list_item_link_target=>'f?p=&APP_ID.:1531:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163190701930332984)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>unistr('\00D3rganos de Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1541:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163191100161332985)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>unistr('Tipos de Evento de Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1551:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163191520604332985)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>unistr('Relaci\00F3n Eventos-Procedimientos Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1561:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163191932818332985)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Unidades SFAF'
+,p_list_item_link_target=>'f?p=&APP_ID.:1571:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163192334527332985)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>unistr('Tipos de Documentaci\00F3n de Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1581:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/tablas_facturación
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163192759621335649)
+,p_name=>unistr('Tablas Facturaci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163192937812335649)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>unistr('Tipos de Documentaci\00F3n de Facturaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1601:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163193382068335649)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>unistr('Tipo de Evento de Facturaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1611:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/tablas_gestión_presupuestaria
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163193707332338419)
+,p_name=>unistr('Tablas Gesti\00F3n Presupuestaria')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163193923086338419)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Organismos'
+,p_list_item_link_target=>'f?p=&APP_ID.:1201:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163194329832338420)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Sistemas'
+,p_list_item_link_target=>'f?p=&APP_ID.:1211:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163194711069338420)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Tipos de Marco Legal'
+,p_list_item_link_target=>'f?p=&APP_ID.:1221:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163195140699338420)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>unistr('Tipos de Modificaci\00F3n Presupuestaria')
+,p_list_item_link_target=>'f?p=&APP_ID.:1231:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163195502833338420)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>unistr('Tipos de Documentos Modificaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1241:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/tablas_modelos
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163195976047344263)
+,p_name=>'Tablas Modelos'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163196167577344263)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>unistr('Tipos de Modelo de Documentaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1701:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/tablas_planificación
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163196541799349428)
+,p_name=>unistr('Tablas Planificaci\00F3n')
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163196756934349429)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Jefes de Proyecto'
+,p_list_item_link_target=>'f?p=&APP_ID.:1301:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163197151310349429)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Unidades Proponentes'
+,p_list_item_link_target=>'f?p=&APP_ID.:1311:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163197507775349429)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>unistr('Tipos de Contrataci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1321:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163197925603349429)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Ejercicios Futuros'
+,p_list_item_link_target=>'f?p=&APP_ID.:1331:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163198372089349429)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Prioridades'
+,p_list_item_link_target=>'f?p=&APP_ID.:1341:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163198751592349429)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>unistr('Estados de la Previsi\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1351:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163199118875349430)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>'Funciones'
+,p_list_item_link_target=>'f?p=&APP_ID.:1361:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163199558288349430)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Destinatarios'
+,p_list_item_link_target=>'f?p=&APP_ID.:1371:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163199990040349430)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>unistr('Tipos de Atributo de la Previsi\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1381:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163200355764349430)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>unistr('Tipos de Tramitaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1391:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163200745771349431)
+,p_list_item_display_sequence=>110
+,p_list_item_link_text=>unistr('Tipos de Evento de Planificaci\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1401:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+end;
+/
+prompt --application/shared_components/navigation/lists/tablas_presupuesto
+begin
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(163201114203351795)
+,p_name=>'Tablas Presupuesto'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163201311815351796)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Secciones Presupuestarias'
+,p_list_item_link_target=>'f?p=&APP_ID.:1101:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163201718373351796)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Servicios Presupuestarios'
+,p_list_item_link_target=>'f?p=&APP_ID.:1111:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163202158005351796)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Conceptos Presupuestarios'
+,p_list_item_link_target=>'f?p=&APP_ID.:1121:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163202568182351797)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'Vinculantes Presupuestarios',
+''))
+,p_list_item_link_target=>'f?p=&APP_ID.:1131:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163202983356351797)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Programas Presupuestarios'
+,p_list_item_link_target=>'f?p=&APP_ID.:1141:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(163203391916351797)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>unistr('Proyectos de Inversi\00F3n')
+,p_list_item_link_target=>'f?p=&APP_ID.:1151:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-eur'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 end;
@@ -12339,7 +12905,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'MIGUEL'
-,p_last_upd_yyyymmddhh24miss=>'20211122164455'
+,p_last_upd_yyyymmddhh24miss=>'20211122174828'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(162821312553790862)
@@ -12395,6 +12961,15 @@ wwv_flow_api.create_worksheet_column(
 ,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
 unistr('Denominaci\00F3n legal seg\00FAn PGE.'),
 ''))
+);
+wwv_flow_api.create_worksheet_rpt(
+ p_id=>wwv_flow_api.id(163176005495172203)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'1631761'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'SECCION:NOMBRE_SECCION'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(162822820373790866)
